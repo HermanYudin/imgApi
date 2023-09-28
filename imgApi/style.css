@@ -129,6 +129,72 @@ body{
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.9); 
 }
 
+.footer{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    max-height: 69px;
+  }
+
+  .git-name{
+    width:33.333%;
+    background-color: black;
+  }
+
+  .github-link{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .year-container{
+    width:33.334%;
+  }
+
+  .school{
+    width:33.333%;
+    background-color: #333;
+  }
+
+  .school-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rs-logo{
+    height: 69px;
+    max-width: 100%;
+  }
+
+  .github-text{
+    height: 69px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .year{
+    height:69px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .year{
+    background-color: white;
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+  }
+
 @media screen and (max-width:768px) {
     .search-result{
         width: 45%;

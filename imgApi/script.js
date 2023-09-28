@@ -5,6 +5,22 @@ const searchRes = document.querySelector('.search-results');
 const showMoreBtn = document.querySelector('.show-more-btn');
 let inputData = '';
 let page = 1;
+const reset = document.querySelector('.reset');
+
+// ------Задаём первоначальное отображение контента на странице----
+input.value = 'Coding';
+
+if(input.value === 'Coding') {
+    searchImages()
+};
+
+// ------Делаем курсор в поле ввода при загрузке страницы---------
+
+window.addEventListener("DOMContentLoaded", function() {
+    input.focus();
+});
+
+// ------Функция получения и отображения контента с api-------
 
 async function searchImages(){
     inputData = input.value;
@@ -42,9 +58,11 @@ async function searchImages(){
     page++;
 
     if(page > 1){
-            showMoreBtn.style.display = 'block';
+        showMoreBtn.style.display = 'block';
     }
 };
+
+// ----------Слушатели----------
 
 form.addEventListener('submit',(event) => {
 event.preventDefault();
@@ -54,4 +72,8 @@ searchImages();
 
 showMoreBtn.addEventListener('click',() => {
     searchImages();
+});
+
+reset.addEventListener('click',() => {
+    input.value = '';
 });

@@ -9,6 +9,10 @@ body{
     background-color: darkgrey;
 }
 
+.main{
+    min-height:100vh;
+}
+
 .title{
     font-weight: bold;
     text-align: center;
@@ -202,10 +206,21 @@ body{
     .search-results{
         padding:20px;
     }
+
+    .github-link,
+    .year{
+        font-size: 23px;
+    }
 }
 
 @media screen and (max-width:480px) {
     .search-result{
         width: 100%;
     }
+
+    .github-link,
+    .year{
+        font-size: 14px;
+    }
+
 }

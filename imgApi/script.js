@@ -3,6 +3,7 @@ const form = document.querySelector('.img-form');
 const input = document.querySelector('.search-input');
 const searchRes = document.querySelector('.search-results');
 const showMoreBtn = document.querySelector('.show-more-btn');
+const searchBtn = document.querySelector('.search-button');
 let inputData = '';
 let page = 1;
 const reset = document.querySelector('.reset');
@@ -11,7 +12,7 @@ const reset = document.querySelector('.reset');
 input.value = 'Coding';
 
 if(input.value === 'Coding') {
-    searchImages()
+    searchImages();
 };
 
 // ------Делаем курсор в поле ввода при загрузке страницы---------
@@ -67,7 +68,14 @@ async function searchImages(){
 form.addEventListener('submit',(event) => {
 event.preventDefault();
 page = 1;
-searchImages();
+if(input.value.length == 0){
+    input.placeholder = 'Please enter your request';
+    alert('Please enter your request in the form below');
+}
+else{
+    searchImages();
+    input.placeholder = 'Search...';
+    }
 });
 
 showMoreBtn.addEventListener('click',() => {

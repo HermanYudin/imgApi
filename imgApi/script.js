@@ -85,3 +85,9 @@ showMoreBtn.addEventListener('click',() => {
 reset.addEventListener('click',() => {
     input.value = '';
 });
+
+document.body.addEventListener("click", function () {
+    if (event.target === input) {
+        input.value = '';
+    }
+  });
